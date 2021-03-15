@@ -1,0 +1,23 @@
+{
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "eg2.vscode-npm-script",
+    "bungcip.better-toml",
+    "coenraads.bracket-pair-colorizer",
+    "mkxml.vscode-filesize",
+    "github.vscode-pull-request-github",
+    "github.github-vscode-theme",
+    "vscode-icons-team.vscode-icons"
+  ],
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "14"
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteUser": "node",
+  "postCreateCommand": "npm i"
+}

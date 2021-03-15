@@ -1,0 +1,37 @@
+{
+  "name": "workers-ci",
+  "version": "0.1.4",
+  "description": "Workers continuous integration tool",
+  "main": "dist.js",
+  "bin": "dist.js",
+  "repository": "https://github.com/adaptive/workers-ci",
+  "author": "Hugo Romano <adaptive@hey.com>",
+  "keywords": [
+    "cloudflare",
+    "serverless",
+    "edge",
+    "workers",
+    "ci"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "0.9.2",
+    "prettier": "2.2.1"
+  },
+  "scripts": {
+    "build": "npx esbuild --minify index.js --outfile=dist.js",
+    "dry-run": "npm pack --dry-run",
+    "format": "npx prettier --write '**/*.{js,json}' '!dist.js' --arrow-parens avoid --trailing-comma none",
+    "test": "npx esbuild --minify index.js --outfile=dist.js && node dist.js build test/worker.js"
+  },
+  "private": false,
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/adaptive"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "3.0.0",
+    "webpack": "5.25.0",
+    "yargs": "16.2.0"
+  }
+}
