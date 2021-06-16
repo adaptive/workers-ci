@@ -1,6 +1,6 @@
 {
   "name": "workers-ci",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Workers continuous integration tool",
   "main": "dist.js",
   "bin": "dist.js",
