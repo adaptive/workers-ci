@@ -5,7 +5,7 @@
   "main": "dist.js",
   "bin": "dist.js",
   "repository": "https://github.com/adaptive/workers-ci",
-  "author": "Hugo Romano <adaptive@hey.com>",
+  "author": "Hugo Romano <hugoromano@gmail.com>",
   "keywords": [
     "cloudflare",
     "serverless",
