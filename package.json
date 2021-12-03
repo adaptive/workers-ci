@@ -16,7 +16,7 @@
   "license": "MIT",
   "devDependencies": {
     "esbuild": "0.14.1",
-    "prettier": "2.4.1"
+    "prettier": "2.5.0"
   },
   "scripts": {
     "build": "npx esbuild --minify index.js --outfile=dist.js",
