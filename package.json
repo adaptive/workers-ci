@@ -32,6 +32,6 @@
   "dependencies": {
     "isomorphic-fetch": "3.0.0",
     "webpack": "5.70.0",
-    "yargs": "17.3.1"
+    "yargs": "17.4.0"
   }
 }
