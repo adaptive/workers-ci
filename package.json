@@ -15,8 +15,8 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "0.14.29",
-    "prettier": "2.6.1"
+    "esbuild": "0.14.34",
+    "prettier": "2.6.2"
   },
   "scripts": {
     "build": "npx esbuild --minify index.js --outfile=dist.js",
@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "isomorphic-fetch": "3.0.0",
-    "webpack": "5.70.0",
+    "webpack": "5.71.0",
     "yargs": "17.4.0"
   }
 }
