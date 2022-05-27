@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "0.14.39",
+    "esbuild": "0.14.40",
     "prettier": "2.6.2"
   },
   "scripts": {
