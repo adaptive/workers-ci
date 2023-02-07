@@ -8,18 +8,23 @@ jobs:
     timeout-minutes: 5
     strategy:
       matrix:
-        node: [12, 14]
+        node: [14, 16, 17-nightly, 18, 19-nightly]
     steps:
     - uses: actions/checkout@v3
+    - uses: pnpm/action-setup@v2
+      with:
+        version: latest
     - uses: actions/setup-node@v3.6.0
       with:
         node-version: ${{ matrix.node }}
-        cache: 'npm'
-    - name: NPM Install
-      run: npm i
-    - name: Build
-      run: npm run build
+        cache: 'pnpm'
+    - name: PNPM Install
+      run: pnpm install --no-frozen-lockfile
     - name: Pack and Unpack
-      run: npm pack && tar -xvzf *.tgz
+      run: pnpm pack && tar -xvzf *.tgz
     - name: Test
-      run: npm run test
+      run: pnpm test
+    - name: Delete /package and *.tgz
+      run: rm -rf package && rm -rf *.tgz
+    - name: Publish Dry Run
+      run: pnpm publish --dry-run --no-git-checks
