@@ -1,6 +1,6 @@
 {
   "name": "workers-ci",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "Workers continuous integration tool",
   "main": "dist.js",
   "bin": "dist.js",
@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "esbuild": "0.17.5",
+    "esbuild": "0.17.6",
     "prettier": "2.8.3"
   },
   "scripts": {
