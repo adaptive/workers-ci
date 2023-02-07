@@ -23,6 +23,6 @@ jobs:
     - name: Build
       run: pnpm build
     - name: Publish
-      run: pnpm publish --access public
+      run: pnpm publish --access public --publish-branch main
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
