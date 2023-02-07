@@ -21,8 +21,8 @@
   "scripts": {
     "build": "npx esbuild --minify index.js --outfile=dist.js",
     "dry-run": "npm pack --dry-run",
-    "format": "npx prettier --write '**/*.{js,json}' '!dist.js' --arrow-parens avoid --trailing-comma none",
-    "test": "npx esbuild --minify index.js --outfile=dist.js && node dist.js build test/worker.js"
+    "format": "prettier --write '**/*.{js,json}' '!dist.js' --arrow-parens avoid --trailing-comma none",
+    "test": "esbuild --minify index.js --outfile=dist.js && node dist.js build test/worker.js"
   },
   "private": false,
   "funding": {
